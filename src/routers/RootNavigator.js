@@ -3,9 +3,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import NavigationServices from '../utils/navigationServices';
 // Screen Import
-import SignInContainer from 'scenes/auth/signIn/SignIn.container';
 import {TransitionPresets} from '@react-navigation/stack';
 import GetStartContainer from 'scenes/getStart/GetStart.container';
+import SCENE_NAMES from '../constants/sceneName';
 const Stack = createStackNavigator();
 
 function RootNavigator({onNavigationStateChange}) {
@@ -23,16 +23,6 @@ function RootNavigator({onNavigationStateChange}) {
           ...TransitionPresets.SlideFromRightIOS,
         }}
         initialRouteName={SCENE_NAMES.GET_START}>
-        {__DEV__ && (
-          <Stack.Screen name={SCENE_NAMES.DUMMY} component={DummyScreen} />
-        )}
-        {/* Plop screen */}
-        <Stack.Screen name={SCENE_NAMES.SIGN_IN} component={SignInContainer} />
-        <Stack.Screen
-          options={{headerShown: false}}
-          name={SCENE_NAMES.MAIN}
-          component={MainTabNavigator}
-        />
         <Stack.Screen
           options={{headerShown: false}}
           name={SCENE_NAMES.GET_START}
