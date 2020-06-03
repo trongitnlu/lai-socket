@@ -4,7 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import NavigationServices from '../utils/navigationServices';
 // Screen Import
 import {TransitionPresets} from '@react-navigation/stack';
-import GetStartContainer from 'scenes/getStart/GetStart.container';
+import GetStartContainer from '../scenes/getStart/GetStart.container';
 import SCENE_NAMES from '../constants/sceneName';
 const Stack = createStackNavigator();
 
