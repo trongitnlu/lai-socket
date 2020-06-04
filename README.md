@@ -1,5 +1,9 @@
 # lai-socket
-#Install libs
+#Run
 ```
-yarn add react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+yarn install
+//Run on ios
+cd ios && pod install && cd.. react-native run-ios
+//Run on android
+react-native run-android 
 ```
